@@ -1,8 +1,10 @@
+#!/usr/bin/env python3
 from flask_wtf import FlaskForm
 from flask_login import current_user
 from wtforms import StringField, PasswordField, SubmitField, DecimalField, DateField, SelectField
 from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError
-from backend.app.models import User
+from ..app.models.user import User
+
 
 # Signup Form
 class SignupForm(FlaskForm):
@@ -53,7 +55,11 @@ class ProfileForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=4, max=20)])
     submit = SubmitField('Update Profile')
 
-    # Custom validation to check if email or username already exists
+class ChangePasswordForm(FlaskForm):
+    current_password = PasswordField('Current Password', validators=[DataRequired()])
+    new_password = PasswordField('New Password', validators=[DataRequired(), Length(min=6)])
+    confirm_password = PasswordField('Confirm New Password', validators=[DataRequired(), EqualTo('new_password')])
+    submit = SubmitField('Change Password')
 
 
 # Transaction Form

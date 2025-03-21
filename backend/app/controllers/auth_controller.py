@@ -1,8 +1,8 @@
+#!/usr/bin/env python3
 from flask import jsonify, session, redirect, url_for, flash
-from flask_bcrypt import Bcrypt
 from flask_login import login_user, logout_user, current_user, login_manager
 from backend.app.models.user import User
-from app import db
+from extensions import db, Bcrypt
 
 
 bcrypt = Bcrypt()

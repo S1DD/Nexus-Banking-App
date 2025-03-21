@@ -1,1 +1,74 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
 .env
+.venv/
+venv/
+env/
+
+# Flask
+instance/
+*.log
+
+# IDE/Editor
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node.js (if applicable)
+node_modules/
+dist/
+build/
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Large files
+*.zip
+*.tar.gz
+*.mp4
+*.mp3
+*.jpg
+*.png
+
+# Testing and coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# SQLite databases
+*.sqlite3
+*.db
+
+# Environment variables
+.env
+.secrets
+
+# Build and distribution
+dist/
+build/
+*.egg-info/
