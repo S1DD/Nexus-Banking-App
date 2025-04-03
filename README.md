@@ -1,50 +1,95 @@
-# Nexus - Personal Finance Management App
+# Nexus Banking App
 
-Nexus is a simple, user-friendly web application designed to help users manage their finances effectively. It provides core banking functionalities, personalized insights, and a clean, intuitive interface.
+## Introduction
 
-## Features
+Nexus Banking App is a secure and user-friendly web application designed to simplify online banking. It allows users to manage their accounts, perform transactions, and view their financial dashboard with ease. Built using Flask, SQLAlchemy, and Flask-Login, the app ensures robust authentication and data management.
 
-* **User Authentication:**
-    * Sign up, log in, and log out.
-    * Password hashing for secure authentication.
-* **Dashboard:**
-    * View account balance and recent transactions.
-    * Visualize spending insights with charts.
-* **Transactions:**
-    * Add, view, and categorize transactions.
-* **Profile Management:**
-    * Update user profile information (name, email, username).
-* **Budgeting:**
-    * Set monthly budgets for different categories.
-    * Track spending against budgets.
-* **Notifications:**
-    * Receive alerts for transactions and budget limits.
 
-## Technologies Used
+- **Final Project Blog Article**: [Read the Blog](https://medium.com/@thabiso.molefe515/building-the-nexus-banking-app-a-journey-of-growth-and-learning-204c723b6da0)
+- **Author(s)**: [Thabiso Molefe](https://www.linkedin.com/in/thabiso-molefe-014aaa10b/)
 
-* **Frontend:**
-    * HTML, CSS, JavaScript
-    * Bootstrap for responsive design
-    * Chart.js for visualizations
-* **Backend:**
-    * Flask (Python) for server-side logic
-    * Flask-WTF for form handling
-    * Flask-Login for user session management
-* **Database:**
-    * SQLite (for development) or MySQL (for production)
-    * Flask-SQLAlchemy for ORM
-* **Deployment:**
-    * Heroku or AWS (for production deployment)
+---
 
-## Setup Instructions
+## Installation
 
-### 1. Prerequisites
+Follow these steps to set up the project locally:
 
-* Python 3.8 or higher
-* pip (Python package manager)
-* MySQL (optional, for production)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/nexus-banking-app.git
+   cd nexus-banking-app
+   ```
 
-### 2. Clone the Repository
+2. Create a virtual environment and activate it:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-```bash
-git clone [https://github.com/your-username/nexus-app.git](https://github.com/your-username/nexus-app.git)
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Set up environment variables:
+   - Create a `.env` file in the root directory.
+   - Add the following variables:
+     ```
+     SECRET_KEY=your-secret-key
+     DATABASE_URL=sqlite:///nexus.db
+     ```
+
+5. Initialize the database:
+   ```bash
+   flask db upgrade
+   ```
+
+6. Run the application:
+   ```bash
+   flask run
+   ```
+
+---
+
+## Usage
+
+1. Navigate to the deployed site or run the app locally at `http://127.0.0.1:5000`.
+2. Register for an account or log in using your credentials.
+3. Access features such as:
+   - Viewing account details
+   - Performing transactions
+   - Managing user profiles
+   - Viewing transaction history and dashboard analytics
+
+---
+
+## Contributing
+
+We welcome contributions to improve the Nexus Banking App! To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes and push to your fork:
+   ```bash
+   git commit -m "Add feature-name"
+   git push origin feature-name
+   ```
+4. Open a pull request to the main repository.
+
+---
+
+## Related Projects
+
+Here are some related projects that might interest you:
+- [Flask-Login Documentation](https://flask-login.readthedocs.io/)
+- [SQLAlchemy Documentation](https://docs.sqlalchemy.org/)
+- [Bootstrap](https://getbootstrap.com/)
+
+---
+
+## Licensing
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
